@@ -1,21 +1,104 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+/* .App {
+  text-align: left;
+} */
 
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body{
+  font-family: 'Poppins', sans-serif;
+}
 
-.App-header {
-  background-color: #ffffff;
-  min-height: 100vh;
+.header{
+  background: radial-gradient(#fff,#d6b6b6);
+}
+
+.navbar{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
+  padding: 20px; 
 }
+
+nav{
+   flex: 1;
+   text-align: right;
+}
+
+nav ul{
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+p{
+  color:#000;
+}
+
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.col-2{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-basis: 50%;
+  min-width: 100px;
+}
+.truyen{
+  margin: 70px 0;
+}
+
+.truyen .row{   
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col-10{
+  float: left;
+  width: 10%;
+  padding: 5px;
+  flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.col-10 img{
+  width: 30%;
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;  
+}
+
+.small-container::after
+{
+  content: "";
+  display: table;
+  clear: both;
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
 
 

@@ -1,0 +1,53 @@
+{
+    "comics": [
+        {
+            "title": "Đại quản gia là ma hoàng",
+            "id": "1"
+        },
+
+        {
+            "title": "Huyết thánh cứu thế chủ: Ta chỉ cần 0.00001%",
+            "id": "2"
+        },
+
+        {
+            "title": "Lạn kha kỳ duyên",
+            "id": "3"
+        },
+
+        {
+            "title": "Lão tổ luyện thể mạnh nhất",
+            "id": "4"
+        },
+
+        {
+            "title": "Người chơi mới cấp tối đa",
+            "id": "5"
+        },
+
+        {
+            "title": "Nhất kiếm độc tôn",
+            "id": "6"
+        },
+
+        {
+            "title": "Quốc thuật bần đạo không biết! Bần đạo chỉ biết lôi",
+            "id": "7"
+        },
+
+        {
+            "title": "Ta ở nhà 100 năm khi ra ngoài đã vô địch",
+            "id": "8"
+        },
+
+        {
+            "title": "Tạ u thiên sư",
+            "id": "9"
+        },
+
+        {
+            "title": "Thiên đạo đồ thư quán",
+            "id": "10"
+        }
+    ]
+}
