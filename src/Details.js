@@ -1,21 +1,35 @@
-import { BrowserRouter as useParams } from "react-router-dom";
-import useFetch from "./useFetch";
-
-const Details = () => {
-    const { id } = useParams() 
-    const { data: comic, error, isPending } = useFetch('http://localhost:3000/blogs/' + id);
+import './App.css';
+import chapters from "./chapter";
+import comics from './data';
+import { Link, Routes, Route } from 'react-router-dom';
+import Comic from './Comic';
+const ComicDetails = () => {
 
     return (
-        <div class="comic-details">
-            { isPending && <div>Loading...</div> }
-            { error && <div>{ error }</div> }
-            { comic && (
-                <article>
-                    <h2>{ comic.title }</h2>
-                </article>
-            )}
+        <div class="content">
+            <div class="small-container">
+                {chapters.map((chap) =>{
+                    return (
+                        <article key = {chap.id}>
+                            <ul>
+                                <li>
+                                    <Link to={`/:comicId/${chap.id}`}>Chapter {chap.id}</Link>
+                                </li>
+                            </ul>
+                        </article>  
+                    );
+                })} 
+            </div>
+
+            <div class="content-page">
+                <Routes>
+                    <Route path='/:comicId/:chapterId' element={<Comic />}/>
+                </Routes>
+            </div>
         </div>
+
+        
     );
 }
 
-export default Details;
+export default ComicDetails;

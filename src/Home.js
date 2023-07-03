@@ -1,27 +1,35 @@
-import ComicList from "./ComicList";
-import useFetch from "./useFetch";
 import './App.css';
+import { Link, Route, Routes } from 'react-router-dom';
+import comics from './data';
+import ComicDetails from './Details';
 
-const Home = () => {
-    const { error, isPending, data: comics } = useFetch('http://localhost:3000/')
+function Home(){
+    return(
+        <div class="comic-details">
+            <div class="truyen">
+            <div class="row">
+                <div class="small-container">
+                    <div class="col-10">
+                        {comics.map((comic)=>{
+                            return (
+                                <article key={comic.id}>
+                                    <Link to={`/${comic.id}`}> <img className="img-responsive" src={comics} alt={comic.title}/> </Link>
+                                    <Link to={`/${comic.id}`}> <h3>{comic.title}</h3> </Link>
+                                </article>
+                            );
+                        })}   
+                    </div>
 
-  return (
-    <div className="home">
-        <div class="row"> 
-                    <div class="col-2">
-                        <img src="src/images/isaac.gif" alt="isaac" width="80px"/>
+                    <div class="content-page">
+                        <Routes>
+                            <Route path='/:comicId' element={<ComicDetails />}/>
+                        </Routes>
                     </div>
-                    <div class="col-2">
-                        <h1>Truyện Mới Cập Nhật!</h1>
-                    </div>
+                </div>
+            </div>
         </div>
-        
-        { error && <div>{ error }</div> }
-        { isPending && <div>Loading...</div> }
-        { comics && <ComicList comics={comics} /> }
-        
-    </div>
-  );
+        </div>
+    );
 }
- 
+
 export default Home;
