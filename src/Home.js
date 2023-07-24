@@ -13,7 +13,7 @@ function Home(){
                         {comics.map((comic)=>{
                             return (
                                 <article key={comic.id}>
-                                    <Link to={`/${comic.id}`}> <img className="img-responsive" src={comics} alt={comic.title}/> </Link>
+                                    <Link to={`/${comic.id}`}> <img class="img-responsive" src={comics} alt={comic.title}/> </Link>
                                     <Link to={`/${comic.id}`}> <h3>{comic.title}</h3> </Link>
                                 </article>
                             );

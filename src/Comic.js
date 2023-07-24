@@ -1,10 +1,8 @@
 import './App.css';
 const Comic = () => {
-  return (
-        <div class ='section comic'>
-            <h1>Chapter</h1>
-        </div>
-    )
+    <div class="small-container">
+        <h3>hello there!</h3>
+    </div>
 }
     
  export default Comic;
